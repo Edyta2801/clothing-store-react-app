@@ -3,13 +3,13 @@ import React from 'react';
 import './Menu.css';
 
 const styles = {
-  marginBottom: 10
+  marginBottom: 10,
 };
 
-function Menu({ children }) {
+function Menu({children}) {
   return (
     <nav className="Menu" style={styles}>
-      { children }
+      {children}
     </nav>
   );
 }

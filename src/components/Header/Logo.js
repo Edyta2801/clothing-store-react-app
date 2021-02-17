@@ -2,19 +2,23 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import logoImg from './logo.png';
+import {Box, Image} from '@chakra-ui/react';
 
-const styles = {
-  width: 150,
-  height: 'auto',
-};
+// const styles = {
+//   width: 150,
+//   height: 'auto',
+// };
 
 function Logo() {
   return (
-    <div>
+    <Box>
       <Link to="/">
-        <img src={logoImg} alt="logo" style={styles} />
+        <Image h='4vh' src={logoImg} alt="logo"
+        //  style={styles}
+
+         />
       </Link>
-    </div>
+    </Box>
   );
 }
 

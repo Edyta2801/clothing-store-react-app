@@ -61,5 +61,8 @@
   "php.suggest.basic": false,
   "editor.formatOnPaste": false,
   "editor.cursorSmoothCaretAnimation": true,
-  "editor.smoothScrolling": true
+  "editor.smoothScrolling": true,
+  "cSpell.words": [
+    "Chakra"
+  ]
 }
