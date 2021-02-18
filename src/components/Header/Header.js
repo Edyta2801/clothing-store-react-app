@@ -2,7 +2,9 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from './Logo';
 
-import {Flex, Stack, useColorMode, IconButton, Box, HStack} from '@chakra-ui/react';
+import {Flex, Stack, useColorMode, IconButton, Box, HStack, Icon} from '@chakra-ui/react';
+import {MoonIcon, SunIcon} from '@chakra-ui/icons';
+import {MdShoppingCart, MdAccountCircle} from 'react-icons/md';
 
 const Header = () => {
   const {colorMode, toggleColorMode} = useColorMode();
@@ -28,35 +30,53 @@ const Header = () => {
           </NavLink>
         </Box>
 
-        <Stack spacing={8} color={textColor[colorMode]} justify="center" align="center" isInline>
-          <Box position="relative">
+        <Stack spacing={6} color={textColor[colorMode]} justify="center" align="center" isInline>
+          <Box
+            position="relative"
+            _hover={{
+              borderBottom: '2px solid',
+            }}
+          >
             <NavLink
-              exact to="/"
+              exact
+              to="/"
+              //     style={{ background: "red", ":hover": { background: "green" } }}
+              // activeStyle={{ background: "cyan" }}
+              // style={{  textDecoration: 'none',":hover":{ textDecoration: 'underline'}}}
               activeStyle={{
-                fontWeight: 'bold',
-                color: 'red',
+                fontWeight: 'bolder',
               }}
             >
               Home
             </NavLink>
           </Box>
-          <Box position="relative">
+          <Box
+            position="relative"
+            _hover={{
+              borderBottom: '2px solid',
+            }}
+          >
             <NavLink
-              exact to="/about"
+              exact
+              to="/about"
               activeStyle={{
-                fontWeight: 'bold',
-                color: 'red',
+                fontWeight: 'bolder',
               }}
             >
               About
             </NavLink>
           </Box>
-          <Box position="relative">
+          <Box
+            position="relative"
+            _hover={{
+              borderBottom: '2px solid',
+            }}
+          >
             <NavLink
-              exact to="/products"
+              exact
+              to="/products"
               activeStyle={{
-                fontWeight: 'bold',
-                color: 'orange',
+                fontWeight: 'bolder',
               }}
             >
               Products
@@ -64,31 +84,51 @@ const Header = () => {
           </Box>
         </Stack>
 
-        <HStack spacing="24px">
+        <Stack spacing={2} color={textColor[colorMode]} justify="center" align="center" isInline>
+          >
           <Box>
-            <IconButton>
-              <NavLink exact to="/cart">
-                <button>Cart</button>
-              </NavLink>
-            </IconButton>
+            <NavLink exact to="/cart">
+              Cart
+              <Icon
+                as={MdShoppingCart}
+                colorScheme="yellow"
+                w={6}
+                h={6}
+                mx="1"
+                _hover={{
+                  width: '7',
+                  height: '7',
+                  color: 'teal.500',
+                }}
+              ></Icon>
+            </NavLink>
           </Box>
           <Box>
-            <IconButton>
-              <NavLink exact to="/login">
-                <button>login</button>
-              </NavLink>
-            </IconButton>
+            <NavLink exact to="/login">
+              Login
+              <Icon
+                as={MdAccountCircle}
+                w={6}
+                h={6}
+                mx={1}
+                _hover={{
+                  width: '7',
+                  height: '7',
+                  color: 'teal.500',
+                }}
+              ></Icon>
+            </NavLink>
           </Box>
           <Box>
             <IconButton
               rounded="full"
               onClick={toggleColorMode}
-              icon={colorMode === 'light' ? 'moon' : 'sun'}
+              icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
             >
               Change Color Mode
             </IconButton>
           </Box>
-        </HStack>
+        </Stack>
       </Flex>
     </Flex>
   );
