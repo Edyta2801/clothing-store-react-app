@@ -1,22 +1,26 @@
 import React from 'react';
-import {BrowserRouter as Router,
+import {
+  BrowserRouter as Router,
   //  Route,
   //   Switch,
   //    SecureRoute
-    } from 'react-router-dom';
+} from 'react-router-dom';
 
-import Header from './components/Header';
-import { Flex} from '@chakra-ui/react';
+import {ChakraProvider} from '@chakra-ui/react';
+
+import {Header} from './components/Header';
+import {Flex} from '@chakra-ui/react';
 
 import './App.css';
 
 function App() {
   return (
+    <ChakraProvider>
       <Router>
-          <Flex direction="column" align="center" justify="center">
-            <Header />
-            <Flex justify="center" align="center" w="100%" h="93vh">
-              {/* <Content>
+        <Flex direction="column" align="center" justify="center">
+          <Header/>
+          <Flex justify="center" align="center" w="100%" h="93vh">
+            {/* <Content>
         <Switch>
           <Route path="/about">
             <About />
@@ -36,11 +40,10 @@ function App() {
         </Switch>
       </Content>
       <Footer /> */}
-            </Flex>
           </Flex>
-
+        </Flex>
       </Router>
-
+    </ChakraProvider>
   );
 }
 

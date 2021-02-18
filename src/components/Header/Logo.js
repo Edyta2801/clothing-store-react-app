@@ -13,7 +13,7 @@ function Logo() {
   return (
     <Box>
       <Link to="/">
-        <Image h='4vh' src={logoImg} alt="logo"
+        <Image  h='6vh' src={logoImg} alt="logo"
         //  style={styles}
 
          />

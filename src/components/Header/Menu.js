@@ -10,6 +10,7 @@ function Menu({children}) {
   return (
     <nav className="Menu" style={styles}>
       {children}
+     Test
     </nav>
   );
 }
