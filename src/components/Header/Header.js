@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from './Logo';
 
-import {Flex, Stack, useColorMode, IconButton, Box, HStack, Icon} from '@chakra-ui/react';
+import {Flex, Stack, useColorMode, IconButton, Box, Icon} from '@chakra-ui/react';
 import {MoonIcon, SunIcon} from '@chakra-ui/icons';
 import {MdShoppingCart, MdAccountCircle} from 'react-icons/md';
 
@@ -10,6 +10,7 @@ const Header = () => {
   const {colorMode, toggleColorMode} = useColorMode();
   const bgColor = {light: 'gray.300', dark: 'gray.600'};
   const textColor = {light: 'black', dark: 'gray.100'};
+
 
   return (
     <Flex
@@ -25,8 +26,8 @@ const Header = () => {
     >
       <Flex w={['100vw', '100vw', '80vw', '80vw']} justify="space-around">
         <Box>
-          <NavLink to="/">
-            <Logo />
+          <NavLink to="/" >
+           <Logo/>
           </NavLink>
         </Box>
 
@@ -34,15 +35,12 @@ const Header = () => {
           <Box
             position="relative"
             _hover={{
-              borderBottom: '2px solid',
+              borderBottom: '2px solid rgb(49, 151, 149)',
             }}
           >
             <NavLink
               exact
               to="/"
-              //     style={{ background: "red", ":hover": { background: "green" } }}
-              // activeStyle={{ background: "cyan" }}
-              // style={{  textDecoration: 'none',":hover":{ textDecoration: 'underline'}}}
               activeStyle={{
                 fontWeight: 'bolder',
               }}
@@ -53,7 +51,8 @@ const Header = () => {
           <Box
             position="relative"
             _hover={{
-              borderBottom: '2px solid',
+              borderBottom: '2px solid rgb(49, 151, 149)',
+
             }}
           >
             <NavLink
@@ -69,7 +68,7 @@ const Header = () => {
           <Box
             position="relative"
             _hover={{
-              borderBottom: '2px solid',
+              borderBottom: '2px solid rgb(49, 151, 149)',
             }}
           >
             <NavLink
@@ -96,8 +95,6 @@ const Header = () => {
                 h={6}
                 mx="1"
                 _hover={{
-                  width: '7',
-                  height: '7',
                   color: 'teal.500',
                 }}
               ></Icon>
@@ -112,8 +109,6 @@ const Header = () => {
                 h={6}
                 mx={1}
                 _hover={{
-                  width: '7',
-                  height: '7',
                   color: 'teal.500',
                 }}
               ></Icon>
