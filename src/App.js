@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  //  Route,
+  Route,
   //   Switch,
   //    SecureRoute
 } from 'react-router-dom';
@@ -9,6 +9,7 @@ import {
 import {ChakraProvider} from '@chakra-ui/react';
 
 import {Header} from './components/Header';
+import {LandingLayout} from './components/LandingLayout';
 import {Flex} from '@chakra-ui/react';
 
 import './App.css';
@@ -17,10 +18,14 @@ function App() {
   return (
     <ChakraProvider>
       <Router>
-        <Flex direction="column" align="center" justify="center">
-          <Header/>
+        <LandingLayout>
+          <Flex direction="column" align="center" justify="center">
+          <Header />
           <Flex justify="center" align="center" w="100%" h="93vh">
-            {/* <Content>
+
+          <Route path="/">Home</Route>
+
+          {/* <Content>
         <Switch>
           <Route path="/about">
             <About />
@@ -42,6 +47,7 @@ function App() {
       <Footer /> */}
           </Flex>
         </Flex>
+        </LandingLayout>
       </Router>
     </ChakraProvider>
   );

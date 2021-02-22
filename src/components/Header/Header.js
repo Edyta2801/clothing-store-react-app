@@ -11,7 +11,6 @@ const Header = () => {
   const bgColor = {light: 'gray.300', dark: 'gray.600'};
   const textColor = {light: 'black', dark: 'gray.100'};
 
-
   return (
     <Flex
       w="100vw"
@@ -26,8 +25,8 @@ const Header = () => {
     >
       <Flex w={['100vw', '100vw', '80vw', '80vw']} justify="space-around">
         <Box>
-          <NavLink to="/" >
-           <Logo/>
+          <NavLink to="/">
+            <Logo />
           </NavLink>
         </Box>
 
@@ -52,7 +51,6 @@ const Header = () => {
             position="relative"
             _hover={{
               borderBottom: '2px solid rgb(49, 151, 149)',
-
             }}
           >
             <NavLink
