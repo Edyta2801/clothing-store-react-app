@@ -2,13 +2,12 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  //   Switch,
+  Switch,
   //    SecureRoute
 } from 'react-router-dom';
 
-import {ChakraProvider} from '@chakra-ui/react';
-
 import {Header} from './components/Header';
+import {SideBar} from './components/SideBar';
 import {LandingLayout} from './components/LandingLayout';
 import {Flex} from '@chakra-ui/react';
 
@@ -16,16 +15,15 @@ import './App.css';
 
 function App() {
   return (
-    <ChakraProvider>
-      <Router>
-        <LandingLayout>
-          <Flex direction="column" align="center" justify="center">
-          <Header />
-          <Flex justify="center" align="center" w="100%" h="93vh">
+    <Router>
+      <Switch>
+        <Route path="/">
+          <LandingLayout>
+            <Header />
+            <SideBar />
+              <Route path="/">Home</Route>
 
-          <Route path="/">Home</Route>
-
-          {/* <Content>
+              {/* <Content>
         <Switch>
           <Route path="/about">
             <About />
@@ -45,11 +43,11 @@ function App() {
         </Switch>
       </Content>
       <Footer /> */}
-          </Flex>
-        </Flex>
-        </LandingLayout>
-      </Router>
-    </ChakraProvider>
+          
+          </LandingLayout>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
