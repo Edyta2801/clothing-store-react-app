@@ -1,14 +1,10 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
-// import {Box, Flex, Text, Button, Stack} from '@chakra-ui/react';
-import {Flex, Stack, useColorMode, Button, IconButton, Box, Icon, Text} from '@chakra-ui/react';
+import {NavLink} from 'react-router-dom';
+import {Flex, Stack, Box, Icon, Text} from '@chakra-ui/react';
 import Logo from '../Header/Logo';
-import { ColorModeSwitcher } from '../../ColorModeSwitcher';
+import {MdShoppingCart, MdAccountCircle} from 'react-icons/md';
 
 const MenuItem = ({children, isLast, to = '/', ...rest}) => {
-  const {colorMode, toggleColorMode} = useColorMode();
-  const bgColor = {light: 'gray.300', dark: 'gray.600'};
-  const textColor = {light: 'black', dark: 'gray.100'};
   return (
     <Text
       mb={{base: isLast ? 0 : 8, sm: 0}}
@@ -17,35 +13,31 @@ const MenuItem = ({children, isLast, to = '/', ...rest}) => {
       {...rest}
     >
       {/* <Link to={to}>{children}</Link> */}
-      <Stack spacing={6}
-
-      // color={textColor[colorMode]}
-      justify="center" align="center" isInline>
-          <Box
-            position="relative"
-            _hover={{
-              borderBottom: '2px solid rgb(49, 151, 149)',
-            }}
-          >
-            <NavLink
-              to={to}
-              activeStyle={{
-                fontWeight: 'bolder',
-              }}
-            >
-              {children}
-            </NavLink>
-          </Box>
-          </Stack>
+      <Stack
+        spacing={6}
+        // color={textColor[colorMode]}
+        justify="center"
+        align="center"
+        isInline
+      >
+        <Box
+          position="relative"
+          _hover={{
+            borderBottom: '2px solid rgb(49, 151, 149)',
+          }}
+        >
+          <NavLink to={to}>{children}</NavLink>
+        </Box>
+      </Stack>
     </Text>
   );
 };
 
 const CloseIcon = () => (
-  <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+  <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="#319795">
     <title>Close</title>
     <path
-      fill="white"
+      // fill="white"
       d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502
        15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023
         2.63599L9.00023 7.58599Z"
@@ -54,7 +46,7 @@ const CloseIcon = () => (
 );
 
 const MenuIcon = () => (
-  <svg width="24px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
+  <svg width="24px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#319795">
     <title>Menu</title>
     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
   </svg>
@@ -73,12 +65,14 @@ const SideBar = props => {
       w="100%"
       mb={8}
       p={8}
-      // bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
-      // color={['white', 'white', 'primary.700', 'primary.700']}
       {...props}
     >
       <Flex align="center">
-        <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} />
+        <Box>
+          <NavLink to="/">
+            <Logo w="100px" />
+          </NavLink>
+        </Box>
       </Flex>
 
       <Box display={{base: 'block', md: 'none'}} onClick={toggleMenu}>
@@ -95,27 +89,53 @@ const SideBar = props => {
           direction={['column', 'column', 'row', 'row']}
           pt={[4, 4, 0, 0]}
         >
-          <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/how">How It works </MenuItem>
-          <MenuItem to="/features">Features </MenuItem>
-          <MenuItem to="/pricing">Pricing </MenuItem>
-          <MenuItem to="/signup" isLast></MenuItem>
-            <Button
-              size="sm"
-              rounded="md"
-              color={['primary.500', 'primary.500', 'white', 'white']}
-              bg={['white', 'white', 'primary.500', 'primary.500']}
-              _hover={{
-                bg: ['primary.100', 'primary.100', 'primary.600', 'primary.600'],
-              }}
+          <MenuItem exact to="/">
+            Home
+          </MenuItem>
+          <MenuItem exact to="/about">
+            About{' '}
+          </MenuItem>
+          <MenuItem exact to="/products">
+            Products{' '}
+          </MenuItem>
+          <Flex />
+          <Flex></Flex>
+          <Stack spacing={2} justify="center" align="center" isInline>
             >
-              Create Account
-            </Button>
-
-
+            <Box>
+              <NavLink exact to="/cart">
+                Cart
+                <Icon
+                  as={MdShoppingCart}
+                  colorScheme="yellow"
+                  w={6}
+                  h={6}
+                  mx="1"
+                  color="teal.500"
+                  _hover={{
+                    color: 'teal.700',
+                  }}
+                ></Icon>
+              </NavLink>
+            </Box>
+            <Box>
+              <NavLink exact to="/login">
+                Login
+                <Icon
+                  as={MdAccountCircle}
+                  w={6}
+                  h={6}
+                  mx={1}
+                  color="teal.500"
+                  _hover={{
+                    color: 'teal.700',
+                  }}
+                ></Icon>
+              </NavLink>
+            </Box>
+          </Stack>
         </Flex>
       </Box>
-      {/* <ColorModeSwitcher /> */}
     </Flex>
   );
 };

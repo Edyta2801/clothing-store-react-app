@@ -19,6 +19,9 @@ const styles = {
     a: {
       color: props.colorMode === 'dark' ? 'white' : 'dark',
     },
+    //  svg: {
+    //   fill: props.colorMode === 'dark' ? 'white' : 'teal.500',
+    // }
   }),
 };
 

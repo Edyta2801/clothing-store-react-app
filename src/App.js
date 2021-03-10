@@ -17,9 +17,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        {/* <Route path="/"> */}
           <LandingLayout>
-            <Header />
+            {/* <Header /> */}
             <SideBar />
               <Route path="/">Home</Route>
 
@@ -43,9 +43,9 @@ function App() {
         </Switch>
       </Content>
       <Footer /> */}
-          
+
           </LandingLayout>
-        </Route>
+        {/* </Route> */}
       </Switch>
     </Router>
   );
