@@ -9,7 +9,7 @@ import {
 import {Home} from './pages/Home';
 import {SideBar} from './components/SideBar';
 import {LandingLayout} from './components/LandingLayout';
-import {Flex} from '@chakra-ui/react';
+
 
 import './App.css';
 
