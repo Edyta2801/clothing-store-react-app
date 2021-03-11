@@ -11,7 +11,7 @@ import {Stack, Image, Box} from '@chakra-ui/react';
 const styles = {
   fontFamily: 'Lobster',
   color: 'rgb(49, 151, 149)',
-  fontSize:'20px',
+  fontSize:'24px',
   display:'inline',
  fontStyle:'italic'
 };
@@ -20,11 +20,11 @@ function Logo() {
   return (
     <Box>
       <Link to="/">
-        <Stack justify="center" align="center" spacing="-2" isInline>
+        <Stack justify="center" align="center" spacing="-1" isInline>
           <Image
             src={logoImg}
             alt="logo"
-            h="6vh"
+            h="7vh"
             //  style={styles}
           />
           <span style={styles}>Clothes ForYou </span>

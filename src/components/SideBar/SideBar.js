@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {Flex, Stack, Box, Icon, Text} from '@chakra-ui/react';
 import Logo from '../Header/Logo';
 import {MdShoppingCart, MdAccountCircle} from 'react-icons/md';
+// import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 const MenuItem = ({children, isLast, to = '/', ...rest}) => {
   return (
@@ -133,6 +134,7 @@ const SideBar = props => {
                 ></Icon>
               </NavLink>
             </Box>
+            {/* <ColorModeSwitcher/> */}
           </Stack>
         </Flex>
       </Box>

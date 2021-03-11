@@ -6,7 +6,7 @@ import {
   //    SecureRoute
 } from 'react-router-dom';
 
-import {Header} from './components/Header';
+import {Home} from './pages/Home';
 import {SideBar} from './components/SideBar';
 import {LandingLayout} from './components/LandingLayout';
 import {Flex} from '@chakra-ui/react';
@@ -16,14 +16,15 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Switch>
-        {/* <Route path="/"> */}
-          <LandingLayout>
-            {/* <Header /> */}
-            <SideBar />
-              <Route path="/">Home</Route>
+      <LandingLayout>
+        {/* <Header /> */}
+        <SideBar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-              {/* <Content>
+          {/* <Content>
         <Switch>
           <Route path="/about">
             <About />
@@ -44,9 +45,9 @@ function App() {
       </Content>
       <Footer /> */}
 
-          </LandingLayout>
-        {/* </Route> */}
-      </Switch>
+          {/* </Route> */}
+        </Switch>
+      </LandingLayout>
     </Router>
   );
 }

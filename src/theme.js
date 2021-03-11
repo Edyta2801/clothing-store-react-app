@@ -15,10 +15,15 @@ const styles = {
       fontSize: 'lg',
       color: props.colorMode === 'dark' ? 'white':'dark',
       lineHeight: 'tall',
+      fonts: {
+        heading: "Open Sans",
+        body: "Raleway",
+      },
     },
     a: {
       color: props.colorMode === 'dark' ? 'white' : 'dark',
     },
+
     //  svg: {
     //   fill: props.colorMode === 'dark' ? 'white' : 'teal.500',
     // }
