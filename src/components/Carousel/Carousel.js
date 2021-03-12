@@ -9,7 +9,7 @@ const Carousel = ({carouselItems, ...rest}) => {
   useEffect(() => {
     scrollInterval.current = setTimeout(() => {
       setActive((active + 1) % carouselItems.length);
-    }, 2000);
+    }, 3000);
     return () => {
       clearTimeout(scrollInterval.current);
     };

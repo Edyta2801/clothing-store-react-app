@@ -11,6 +11,7 @@ const MenuItem = ({children, isLast, to = '/', ...rest}) => {
       mb={{base: isLast ? 0 : 8, sm: 0}}
       mr={{base: 0, sm: isLast ? 0 : 8}}
       display="block"
+      fontSize='lg'
       {...rest}
     >
       {/* <Link to={to}>{children}</Link> */}
@@ -103,7 +104,7 @@ const SideBar = props => {
           <Flex></Flex>
           <Stack spacing={2} justify="center" align="center" isInline>
             >
-            <Box>
+            <Box fontSize='lg'>
               <NavLink exact to="/cart">
                 Cart
                 <Icon
@@ -119,7 +120,7 @@ const SideBar = props => {
                 ></Icon>
               </NavLink>
             </Box>
-            <Box>
+            <Box fontSize='lg'>
               <NavLink exact to="/login">
                 Login
                 <Icon

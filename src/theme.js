@@ -12,7 +12,7 @@ const config = {
 const styles = {
   global: props => ({
     'html, body': {
-      fontSize: 'lg',
+      // fontSize: 'lg',
       color: props.colorMode === 'dark' ? 'white':'dark',
       lineHeight: 'tall',
       fonts: {
