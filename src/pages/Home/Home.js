@@ -1,20 +1,21 @@
 import React from 'react';
 import {  Hero,
 // FeaturedProducts,
-//   Services, Contact
+  // Services,
+//  Contact
  } from '../../components/Hero';
 //  import {Carousel} from '../../components/Carousel';
 //  import {Box, Button, Flex, Image, Heading, Stack, Text} from '@chakra-ui/react';
-//  import {Slider} from '../../components/Slider';
+ import {Services} from '../../components/Services';
+
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      {/* <Slider/> */}
-      {/* <FeaturedProducts />
+      {/* <FeaturedProducts /> */}
       <Services />
-      <Contact /> */}
+      {/* <Contact /> */}
     </main>
   );
 };
