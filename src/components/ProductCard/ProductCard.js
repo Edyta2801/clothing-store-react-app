@@ -6,15 +6,20 @@ import './style.css';
 
 const ProductCard = () => {
   return (
-    <Box w='300px'>
-      <Box className="container" w="300px"
-       align="center" >
+    <Box
+    // maxW="900px"
+    >
+      <Box className="container"
+      flexShrink={0}
+      //  maxW="800px"
+        align="center">
         <Image
           rounded="0.5rem"
           src="https://finalspaceapi.com/img/gary_goodspeed.webp"
           alt="Gary Goodspeed"
-          w={300}
-          h={200}
+          minW={{base: '80vw', md: '25vw'}}
+          // w={['90vw', '90vw', '90vw', '90vw']}
+          maxH={200}
           objectFit="cover"
         />
         <Link className="link" to="products">
