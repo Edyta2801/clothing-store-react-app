@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  background:  #222;
+  border-radius: 0.5rem;
+}
+img {
+  /* width: 100%; */
+  /* display: block;
+  object-fit: cover;
+  border-radius: var(--radius); */
+  transition: all 0.3s linear;
+}
+
+
+.link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background:black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 2.5rem;
+  height: 2.5rem; */
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  opacity: 0;
+  cursor: pointer;
+}
+.container:hover img {
+  opacity: 0.5;
+}
+.container:hover .link {
+  opacity: 1;
+}

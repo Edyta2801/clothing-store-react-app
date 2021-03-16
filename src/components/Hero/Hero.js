@@ -32,6 +32,7 @@ export default function Hero({title, subtitle, image, ctaLink, ctaText, ...rest}
           size='lg'
           fontWeight="bold"
           color="primary.800"
+          opacity="0.9"
           textAlign={['center', 'center', 'left', 'left']}
         >
           {title}
