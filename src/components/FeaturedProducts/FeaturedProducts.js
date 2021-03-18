@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {Wrap, WrapItem, Flex, Text, Box, Heading, Button, Stack} from '@chakra-ui/react';
+import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
 import {ProductCard} from '../ProductCard';
 
 const FeaturedProducts = () => {
