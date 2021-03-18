@@ -9,7 +9,9 @@ import {
 import {Home} from './pages/Home';
 import {SideBar} from './components/SideBar';
 import {LandingLayout} from './components/LandingLayout';
-
+import {SingleProductPage} from './pages/SingleProductPage';
+import {About} from './pages/About';
+import {Products} from './pages/Products';
 
 import './App.css';
 
@@ -22,6 +24,13 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/products/:id" children={<SingleProductPage />} />
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/products">
+            <Products />
           </Route>
 
           {/* <Content>
