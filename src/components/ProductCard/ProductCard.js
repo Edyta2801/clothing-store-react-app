@@ -22,7 +22,7 @@ const ProductCard = () => {
           maxH={200}
           objectFit="cover"
         />
-        <Link className="link" to="products">
+        <Link className="link" to="products/:id">
           <IconButton colorScheme="teal" icon={<Search2Icon />} rounded="full" size="md" />
         </Link>
       </Box>
