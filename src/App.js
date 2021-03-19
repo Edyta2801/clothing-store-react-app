@@ -57,6 +57,7 @@ function App() {
           {/* </Route> */}
         </Switch>
       </LandingLayout>
+      {/* </Footer> */}
     </Router>
   );
 }

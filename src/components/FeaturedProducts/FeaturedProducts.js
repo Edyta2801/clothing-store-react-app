@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
+import {Wrap, WrapItem, Flex, Text, Box, Heading, Button, Stack} from '@chakra-ui/react';
 import {ProductCard} from '../ProductCard';
 
 const FeaturedProducts = () => {
@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
       <Wrap
         w="100%"
         // spacing="1vw"
-        justify="space-around"
+        justify="space-evenly"
         my='10'
         // mt={{base: '0', md: '20'}}
         // mb={{base: '10', md: '0'}}

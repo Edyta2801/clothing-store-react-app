@@ -5,8 +5,9 @@
 .carousel-item {
   position: absolute;
   visibility: hidden;
-  /* width: 80%; */
+ /* max-width: 500px; */
   opacity: 0.3;
+  /* max-height: 500px; */
 }
 
 .carousel-item.visible {
@@ -15,4 +16,5 @@
   opacity: 1;
   /* transition: width 4s linear; */
   transition: opacity 6s linear;
+  /* max-height: 50%; */
 }

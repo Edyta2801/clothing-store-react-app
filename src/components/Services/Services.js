@@ -44,8 +44,8 @@ const Services = () => {
         <Flex
           // align='center'
           // w='100%'
-          maxW="1050px"
-          w={['90vw', '90vw', '90vw', '90vw']}
+          // maxW="1050px"
+          w={['90vw', '80vw', '90vw', '90vw']}
           direction={['column', 'column', 'row', 'row']}
           justify="center"
           bg={bgColor[colorMode]}

@@ -9,7 +9,7 @@ import {  Hero,
  import {Services} from '../../components/Services';
 // import {ProductCard} from '../../components/ProductCard';
 import {FeaturedProducts} from '../../components/FeaturedProducts';
-
+import {Contact} from '../../components/Contact';
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
       {/* <ProductCard/> */}
       <FeaturedProducts />
       <Services />
-      {/* <Contact /> */}
+      <Contact />
     </main>
   );
 };

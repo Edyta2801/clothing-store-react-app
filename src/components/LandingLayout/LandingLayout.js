@@ -19,7 +19,9 @@ export default function LandingLayout(props) {
           //  justifySelf="flex-end"
         />
 
-        <Flex direction="column" align="center" maxW={{xl: '1200px'}} m="0 auto" {...props}>
+        <Flex direction="column" align="center" maxW={{xl: '1200px'}} m="0 auto" {...props}
+        // minH='100vh'
+        >
 
           {props.children}
 
