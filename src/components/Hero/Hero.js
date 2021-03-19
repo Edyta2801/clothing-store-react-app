@@ -13,21 +13,24 @@ export default function Hero({title, subtitle, image, ctaLink, ctaText, ...rest}
   return (
     <Flex
       align="center"
-      justify={{base: 'space-around', md: 'center', xl: 'space-between'}}
+      alignItems='center'
+      // justify={{base: 'space-around', md: 'center', xl: 'space-between'}}
+      justify={{base: '', md: 'center', xl: 'center'}}
       direction={{base: 'column-reverse', md: 'row'}}
       wrap="mo-wrap"
-      minH={{base: '80vh', md: '50vh'}}
+      // minH={{base: '80vh', md: '50vh'}}
       minW={{base: '70vw', md: '80vw'}}
-      px={8}
-      mb={16}
+      px={15}
+      // mb={16}
       // maxH='100'
       {...rest}
     >
       <Stack
-      // flex='1'
+        // flex='1'
         spacing={4}
         w={{base: '60%', md: '40%'}}
         align={['center', 'center', 'flex-start', 'flex-start']}
+        // mt={{base: '20'}}
       >
         <Heading
           as="h1"
@@ -69,15 +72,16 @@ export default function Hero({title, subtitle, image, ctaLink, ctaText, ...rest}
       </Stack>
       {/* <Box w={{base: '80%', sm: '60%', md: '50%'}} mb={{base: 12, md: 0}}> */}
       <Box
-      // flex='1'
-      // display='flex'
-      // alignItems='center'
-      // justifyItems='start'
-      w={{base: '50%', md: '50%'}}
-      mt={{base: -105, md: -190}}
-      mb={{base: 20, md: 40}}
-      maxW={{ md: '35vw'}}>
-
+        // flex='1'
+        // display='flex'
+        // alignItems='center'
+        // justifyItems='start'
+        h="50vh"
+        w={{base: '80%', md: '50%'}}
+        // mt={{base: -105, md: -170}}
+        // mb={{base: 20, md: 40}}
+        maxW={{md: '35vw'}}
+      >
         {/* TODO: Make this change every X secs */}
         <Carousel
           carouselItems={[
