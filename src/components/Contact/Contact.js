@@ -1,17 +1,31 @@
 import React from 'react';
-import {Flex, Box, Text, Stack, Heading} from '@chakra-ui/react';
+import {
+  Box,
+  InputGroup,
+  Heading,
+  InputRightElement,
+  InputLeftElement,
+  Input,
+  Button,
+Center,
+  Stack
+} from '@chakra-ui/react';
+import {EmailIcon} from '@chakra-ui/icons';
+// import {StandardButton} from '../StandardButton';
 
-const Contact = () => {
+const Contact = buttonText => {
   return (
-
-    <Box
-    display='flex'
-      minH="50vh"
-      maxW='1200'
+    // <Box
+    <Stack spacing='8'
+      display={{md: 'flex'}}
+    h='380px'
+      maxW="1200"
       direction={{base: 'column', md: 'row'}}
-      // align="center"
-      justify={{base: 'space-around', md: 'space-around', xl: 'space-between'}}
-      // flexWrap='no-wrap'
+      align="center"
+      wrap="no-wrap"
+      // justify={{base: 'space-around', md: 'center', xl: 'space-between'}}
+      mt={{base:20, md:0}}
+      mx="10"
     >
       <Box flex="1">
         <Heading
@@ -25,7 +39,7 @@ const Contact = () => {
           Join our newsletter and get 20% off
         </Heading>
         <Heading
-        mt='5'
+          mt="5"
           as="h2"
           size="md"
           color="primary.800"
@@ -38,10 +52,29 @@ const Contact = () => {
           soluta veniam provident adipisci cumque eveniet tempore?
         </Heading>
       </Box>
-      <Box flex="1">Form</Box>
-    </Box>
+      <Center
+      flex="1"
+      // mb={{base:50}}
+      // mt={{base:20}}
 
+      >
+        <InputGroup>
+          <InputLeftElement pointerEvents="none" children={<EmailIcon color="teal.500" />} />
+          <Input isInvalid errorBorderColor="teal.500" type="tel" placeholder="Enter email" />
+          <InputRightElement width="6rem">
+            <Button variant="outline" colorScheme="teal">
+              Subscribe
+            </Button>
+            {/* <StandardButton>{buttonText}</StandardButton> */}
+          </InputRightElement>
+        </InputGroup>
+      </Center>
+    {/* </Box> */}
+    </Stack>
   );
 };
+// StandardButton.defaultProps = {
+//   buttonText: 'SUBSCRIBE',
+// };
 
 export default Contact;
