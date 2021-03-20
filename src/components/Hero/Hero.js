@@ -13,28 +13,23 @@ export default function Hero({title, subtitle, image, ctaLink, ctaText, ...rest}
   return (
     <Flex
       align="center"
-      alignItems='center'
-      // justify={{base: 'space-around', md: 'center', xl: 'space-between'}}
-      justify={{base: '', md: 'center', xl: 'center'}}
+      justify={{base: 'space-around', md: 'space-around', xl: 'space-between'}}
       direction={{base: 'column-reverse', md: 'row'}}
-      wrap="mo-wrap"
-      // minH={{base: '80vh', md: '50vh'}}
+      wrap="no-wrap"
+      minH={{base: '80vh', md: '50vh'}}
       minW={{base: '70vw', md: '80vw'}}
-      px={15}
-      // mb={16}
-      // maxH='100'
+      px={8}
+      mb={16}
       {...rest}
     >
       <Stack
-        // flex='1'
         spacing={4}
         w={{base: '60%', md: '40%'}}
         align={['center', 'center', 'flex-start', 'flex-start']}
-        // mt={{base: '20'}}
       >
         <Heading
           as="h1"
-          size="lg"
+          size='lg'
           fontWeight="bold"
           color="primary.800"
           opacity="0.9"
@@ -72,24 +67,20 @@ export default function Hero({title, subtitle, image, ctaLink, ctaText, ...rest}
       </Stack>
       {/* <Box w={{base: '80%', sm: '60%', md: '50%'}} mb={{base: 12, md: 0}}> */}
       <Box
-        // flex='1'
-        // display='flex'
-        // alignItems='center'
-        // justifyItems='start'
-        h="50vh"
-        w={{base: '80%', md: '50%'}}
-        // mt={{base: -105, md: -170}}
-        // mb={{base: 20, md: 40}}
-        maxW={{md: '35vw'}}
+        w={{base: '50%', md: '50%'}}
+        maxW={{md: '36vw'}}
+        //  h={{base:'30%'}}
+        mt={{base: -105, md: -190}}
+        mb={{base: 20, md: 40}}
       >
         {/* TODO: Make this change every X secs */}
         <Carousel
           carouselItems={[
-            <Image src={photo1} rounded="1rem" shadow="2xl" />,
-            <Image src={photo2} rounded="1rem" shadow="2xl" />,
-            <Image src={photo3} rounded="1rem" shadow="2xl" />,
-            <Image src={photo4} rounded="1rem" shadow="2xl" />,
-            <Image src={photo5} rounded="1rem" shadow="2xl" />,
+            <Image src={photo1} size="100%" rounded="1rem" shadow="2xl" />,
+            <Image src={photo2} size="100%" rounded="1rem" shadow="2xl" />,
+            <Image src={photo3} size="100%" rounded="1rem" shadow="2xl" />,
+            <Image src={photo4} size="100%" rounded="1rem" shadow="2xl" />,
+            <Image src={photo5} size="100%" rounded="1rem" shadow="2xl" />,
           ]}
         />
         {/* <Image src={image} size="100%" rounded="1rem" shadow="2xl" /> */}
