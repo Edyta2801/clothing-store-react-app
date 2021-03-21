@@ -7,12 +7,13 @@ export default function LandingLayout(props) {
   return (
 
       <Box
-        // p={-1}
-        mr={1}
-        textAlign={{md: 'right', sm: 'center'}}
-        h='0'
+        // // p={-1}
+        // mr={1}
+        // textAlign={{md: 'right', sm: 'center'}}
+        // h='0'
       >
         <ColorModeSwitcher
+        
           //  p={-1}
           // mt={-1}
           // textAlign={{md: 'right', sm: 'center'}}
@@ -23,7 +24,7 @@ export default function LandingLayout(props) {
         // minH='100vh'
         >
 
-          {props.children}
+          {/* {props.children} */}
 
         </Flex>
       </Box>
