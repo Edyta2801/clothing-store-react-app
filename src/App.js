@@ -12,16 +12,16 @@ import {LandingLayout} from './components/LandingLayout';
 import {SingleProductPage} from './pages/SingleProductPage';
 import {About} from './pages/About';
 import {Products} from './pages/Products';
+import {Footer} from './components/Footer';
 
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <LandingLayout>
-        {/* <Header /> */}
-        <SideBar />
-        <Switch>
+      <SideBar />
+      <Switch>
+        <LandingLayout>
           <Route exact path="/">
             <Home />
           </Route>
@@ -53,11 +53,9 @@ function App() {
         </Switch>
       </Content>
       <Footer /> */}
-
-          {/* </Route> */}
-        </Switch>
-      </LandingLayout>
-      {/* </Footer> */}
+        </LandingLayout>
+      </Switch>
+      <Footer />
     </Router>
   );
 }

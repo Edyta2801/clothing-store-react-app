@@ -10,6 +10,7 @@ import {  Hero,
 // import {ProductCard} from '../../components/ProductCard';
 import {FeaturedProducts} from '../../components/FeaturedProducts';
 import {Contact} from '../../components/Contact';
+// import {Footer} from '../../components/Footer';
 
 const Home = () => {
   return (
