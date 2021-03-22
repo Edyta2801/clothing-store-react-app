@@ -65,7 +65,7 @@ const SideBar = props => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
+      // mb={8}
       p={8}
       {...props}
     >

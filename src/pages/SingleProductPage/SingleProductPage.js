@@ -15,6 +15,16 @@ import {
   Tab,
 } from '@chakra-ui/react';
 
+
+import clothes from './images/clothes.jpg';
+import draft from './images/draft.jpg';
+import sewing from './images/sewing.jpg';
+// import material from './images/material.jpg';
+import manekin from './images/manekin.jpg';
+import show from './images/show.jpg';
+// import clothes from './images/clothes.jpg';
+
+
 const SingleProductPage = () => {
   return (
     <>
@@ -66,29 +76,76 @@ const SingleProductPage = () => {
             <TabPanels>
               <TabPanel>
                 <Image
-                  boxSize="200px"
+                rounded="0.5rem"
+                  boxSize="430px"
                   fit="cover"
-                  src="https://resizing.flixster.com/wTgvsiM8vNLhCcCH-6ovV8n5z5U=/
-                  300x300/v1.bjsyMDkxMzI5O2o7MTgyMDQ7MTIwMDsxMjAwOzkwMA"
+                  src={clothes}
                 />
               </TabPanel>
               <TabPanel>
                 <Image
-                  boxSize="200px"
+                rounded="0.5rem"
+                  boxSize="430px"
                   fit="cover"
-                  src="https://vignette.wikia.nocookie.net/naruto/images/2/21/
-                  Sasuke_Part_1.png/revision/latest?cb=20170716092103"
+                  src={draft}
+                />
+              </TabPanel>
+              <TabPanel>
+                <Image
+                rounded="0.5rem"
+                  boxSize="430px"
+                  fit="cover"
+                  src={sewing}
+                />
+              </TabPanel>
+              <TabPanel>
+                <Image
+                rounded="0.5rem"
+                  boxSize="430px"
+                  fit="cover"
+                  src={manekin}
+                />
+              </TabPanel>
+              <TabPanel>
+                <Image
+                rounded="0.5rem"
+                  boxSize="430px"
+                  fit="cover"
+                  src={show}
                 />
               </TabPanel>
             </TabPanels>
             <TabList>
               <Tab><Image
-                  boxSize="50px"
+              rounded="0.5rem"
+                  boxSize="60px"
                   fit="cover"
-                  src="https://resizing.flixster.com/wTgvsiM8vNLhCcCH-6ovV8n5z5U=/
-                  300x300/v1.bjsyMDkxMzI5O2o7MTgyMDQ7MTIwMDsxMjAwOzkwMA"
+                  src={clothes}
                 /></Tab>
-              <Tab>Sasuke</Tab>
+              <Tab><Image
+              rounded="0.5rem"
+                  boxSize="60px"
+                  fit="cover"
+                  src={draft}
+                /></Tab>
+                 <Tab><Image
+                 rounded="0.5rem"
+                  boxSize="60px"
+                  fit="cover"
+                  src={sewing}
+                /></Tab>
+                 <Tab><Image
+                 rounded="0.5rem"
+                  boxSize="60px"
+                  fit="cover"
+                  src={manekin}
+                /></Tab>
+                 <Tab><Image
+                 rounded="0.5rem"
+                  boxSize="60px"
+                  fit="cover"
+                  src={show}
+                /></Tab>
             </TabList>
           </Tabs>
         </Box>
