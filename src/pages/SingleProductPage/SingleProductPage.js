@@ -15,6 +15,7 @@ import {
   Tab,
   Stack,
   Button,
+  Heading,
 } from '@chakra-ui/react';
 
 import clothes from './images/clothes.jpg';
@@ -24,6 +25,7 @@ import sewing from './images/sewing.jpg';
 import manekin from './images/manekin.jpg';
 import show from './images/show.jpg';
 // import clothes from './images/clothes.jpg';
+import {StarIcon} from '@chakra-ui/icons';
 
 const SingleProductPage = () => {
   return (
@@ -136,29 +138,48 @@ const SingleProductPage = () => {
             </TabList>
           </Tabs>
         </Box>
+
         <Box mt={{base: 4, md: 0}} ml={{md: 6}}>
-          <Text
+          {/* <Text
             fontWeight="bold"
             textTransform="uppercase"
-            fontSize="sm"
+            fontSize="xl"
             letterSpacing="wide"
             color="teal.600"
           >
-            Marketing
-          </Text>
-          <Link
-            mt={1}
-            display="block"
-            fontSize="lg"
-            lineHeight="normal"
-            fontWeight="semibold"
-            href="#"
+            Modern Clothes
+          </Text> */}
+          <Heading
+            as="h1"
+            size="lg"
+            fontWeight="bold"
+            color="primary.800"
+            opacity="0.9"
+            textAlign="left"
           >
-            Finding customers for your new business
-          </Link>
-          <Text mt={2} color="gray.500">
-            Getting a new business off the ground is a lot of hard work. Here are five ideas you can
-            use to find your first customers.
+            Modern Clothes
+          </Heading>
+
+          <Box d="flex" mt="2" alignItems="center">
+            {Array(5)
+              .fill('')
+              .map((_, i) => (
+                <StarIcon key={i} color={i < 4 ? 'teal.500' : 'gray.300'} />
+              ))}
+            <Box as="span" ml="2" color="gray.600" fontSize="sm">
+              34 reviews
+            </Box>
+          </Box>
+
+          <Box color="primary.800" opacity="0.9" fontSize="lg" my="5" fontWeight="bold">
+            $ 350.00
+          </Box>
+
+          <Text mt={2} color="gray.600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ante diam, eleifend et
+            magna vitae, venenatis dictum ex. Praesent id ornare metus. Nam in posuere libero.
+            Vivamus sit amet tortor non orci venenatis pretium eget eu quam. Donec sollicitudin ex
+            nunc, vel rhoncus lorem vulputate sed.
           </Text>
         </Box>
       </Box>
