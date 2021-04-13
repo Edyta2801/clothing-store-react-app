@@ -3,7 +3,7 @@ import axios from 'axios';
 function request(method, endpoint, data = null) {
   return axios({
     method,
-    url: `${process.env.REACT_APP_API_URL_PRODUCTS}${endpoint}`,
+    url: `${process.env.REACT_APP_API_URL}${endpoint}`,
     // url: `${process.env.REACT_APP_API_URL_CARTS}${endpoint}`,
     // url: `${process.env.REACT_APP_API_URL_USERS}${endpoint}`,
 
@@ -30,6 +30,7 @@ function patch(endpoint, data) {
 function _delete(endpoint) {
   return request('DELETE', endpoint);
 }
+
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {

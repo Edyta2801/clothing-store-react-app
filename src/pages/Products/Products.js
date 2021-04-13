@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import api from '../../api';
+
 import {Link} from 'react-router-dom';
 // import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
 
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink} from '@chakra-ui/react';
 
-const Products = () => {
+function Products() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    api.get('/products').then(response => setProducts(response.data));
+  }, []);
+
   return (
     <>
       <Breadcrumb fontWeight="medium" fontSize="sm">
@@ -35,8 +43,16 @@ const Products = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
-      <div>Products Page </div>
+      <div>
+        {products.map(product => (
+          <div key={product.id}>
+            <h2>
+              {product.title} {product.price}
+            </h2>
+          </div>
+        ))}
+      </div>
     </>
   );
-};
+}
 export default Products;
