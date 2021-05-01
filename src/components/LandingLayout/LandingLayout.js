@@ -1,7 +1,7 @@
 import React from 'react';
 import {Flex, Box, Stack} from '@chakra-ui/react';
 
-import {ColorModeSwitcher} from '../../ColorModeSwitcher';
+// import {ColorModeSwitcher} from '../../ColorModeSwitcher';
 
 export default function LandingLayout(props) {
   return (
@@ -11,13 +11,13 @@ export default function LandingLayout(props) {
     // textAlign={{md: 'right', sm: 'center'}}
     // h='0'
     >
-      <ColorModeSwitcher
+      {/* <ColorModeSwitcher
 
-      //  p={-1}
-      // mt={-1}
-      // textAlign={{md: 'right', sm: 'center'}}
-      //  justifySelf="flex-end"
-      />
+      p={-1}
+      mt={-1}
+      textAlign={{md: 'right', sm: 'center'}}
+      justifySelf="flex-end"
+      /> */}
 
       <Flex
         direction="column"

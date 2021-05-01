@@ -112,15 +112,15 @@ const Header = () => {
               ></Icon>
             </NavLink>
           </Box>
-          <Box>
-            <IconButton
+          {/* <Box> */}
+            {/* <IconButton
               rounded="full"
               onClick={toggleColorMode}
               icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
             >
               Change Color Mode
-            </IconButton>
-          </Box>
+            </IconButton> */}
+          {/* </Box> */}
         </Stack>
       </Flex>
     </Flex>

@@ -17,9 +17,13 @@ export const ColorModeSwitcher = props => {
       color="current"
       marginLeft=""
       borderColor="teal.500"
+      // border="2px"
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       {...props}
+      _hover={{
+                  color: 'teal.500',
+                }}
     />
   );
 };
