@@ -3,6 +3,7 @@ import api from '../../api';
 
 import {Link} from 'react-router-dom';
 // import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
+import {Box, Button, Flex, Image, Heading, Stack, Text} from '@chakra-ui/react';
 
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink} from '@chakra-ui/react';
 
@@ -52,6 +53,31 @@ function Products() {
           </div>
         ))}
       </div>
+      <Flex
+        align="center"
+        direction={{base: 'column', md: 'row'}}
+        wrap="no-wrap"
+        minW={{base: '95vw', md: '95vw'}}
+        mt={10}
+        mb={16}
+      >
+        <Box flex="1" align="center" w={{base: '95%', md: '95%'}} backgroundColor="pink">
+          Filter
+          {/* <Filter/> */}
+        </Box>
+
+        <Box flex="3" align="center" w={{base: '95%', md: '95%'}} mx="2" backgroundColor="yellow">
+          <Heading>
+            Sort
+            {/* <Sort/> */}
+          </Heading>
+
+          <Text>
+            ProductList
+            {/* <ProductList/> */}
+          </Text>
+        </Box>
+      </Flex>
     </>
   );
 }
