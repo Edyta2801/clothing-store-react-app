@@ -7,6 +7,8 @@ import {Box, Button, Flex, Image, Heading, Stack, Text} from '@chakra-ui/react';
 
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink} from '@chakra-ui/react';
 
+import ProductList from '../../components/ProductList/ProductList';
+
 function Products() {
   const [products, setProducts] = useState([]);
 
@@ -73,8 +75,7 @@ function Products() {
           </Heading>
 
           <Text>
-            ProductList
-            {/* <ProductList/> */}
+            <ProductList/>
           </Text>
         </Box>
       </Flex>
