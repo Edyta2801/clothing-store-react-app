@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 // import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import {Box, Button, Flex, Image, Heading, Stack, Text} from '@chakra-ui/react';
+import {Box, Flex, Image, Heading, Text} from '@chakra-ui/react';
 import photo from '../../assets/show.jpg';
 
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink} from '@chakra-ui/react';

@@ -3,7 +3,7 @@ import api from '../../api';
 
 import {Link} from 'react-router-dom';
 // import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
-import {Box, Button, Flex, Image, Heading, Stack, Text} from '@chakra-ui/react';
+import {Box,  Flex,  Heading, Text} from '@chakra-ui/react';
 
 import {Breadcrumb, BreadcrumbItem, BreadcrumbLink} from '@chakra-ui/react';
 
@@ -50,7 +50,7 @@ function Products() {
         {products.map(product => (
           <div key={product.id}>
             <h2>
-              {product.title} {product.price}
+                 {product.title} {product.price}
             </h2>
           </div>
         ))}

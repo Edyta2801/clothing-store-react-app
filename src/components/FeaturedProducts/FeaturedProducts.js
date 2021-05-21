@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import api from '../../api';
 import {Link} from 'react-router-dom';
-import {Wrap, WrapItem, Flex, Text, Box, Heading, Button, Stack} from '@chakra-ui/react';
+import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
 import {ProductCard} from '../ProductCard';
 
-const FeaturedProducts = () => {
+function FeaturedProducts() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    api.get('/products?limit=3').then(response => setProducts(response.data));
+  }, []);
   return (
     <>
       <Box w="100%" textAlign="center" mt={{base: '0', md: '20'}} mb="45">
@@ -34,11 +40,30 @@ const FeaturedProducts = () => {
         w="100%"
         // spacing="1vw"
         justify="space-evenly"
-        my='10'
+        my="10"
         // mt={{base: '0', md: '20'}}
         // mb={{base: '10', md: '0'}}
       >
-        <WrapItem>
+        {/* {products.map(product => (
+          <div key={product.id}>
+            <WrapItem>
+              <ProductCard>
+                {product.title} {product.price}
+              </ProductCard>
+            </WrapItem>
+          </div>
+        ))} */}
+        {products.map(product => (
+          <div >
+            <WrapItem>
+              <ProductCard
+              key={product.id} {...product}
+              ></ProductCard>
+            </WrapItem>
+          </div>
+        ))}
+
+        {/* <WrapItem>
           <ProductCard />
         </WrapItem>
         <WrapItem>
@@ -46,7 +71,7 @@ const FeaturedProducts = () => {
         </WrapItem>
         <WrapItem>
           <ProductCard />
-        </WrapItem>
+        </WrapItem> */}
       </Wrap>
       <Stack align="center" mb={{base: '10', md: '10'}}>
         <Link to="/products">
@@ -65,5 +90,5 @@ const FeaturedProducts = () => {
       </Stack>
     </>
   );
-};
+}
 export default FeaturedProducts;

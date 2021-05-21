@@ -11,7 +11,7 @@ const GridView = ({products}) => {
           </h2>
         </div>
       ))} */}
-GridView
+
       {/* {products.map(product => {
         return <ProductCard key={product.id} {...product} />;
       })} */}
