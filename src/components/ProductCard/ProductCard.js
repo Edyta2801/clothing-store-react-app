@@ -11,7 +11,7 @@ const ProductCard = ({product, title, price, image}) => {
     >
       <Box className="container" flexShrink={0} align="center">
         <Image
-          rounded="0.5rem"
+          rounded="0.8rem"
           // src="https://finalspaceapi.com/img/gary_goodspeed.webp"
           src={image}
 

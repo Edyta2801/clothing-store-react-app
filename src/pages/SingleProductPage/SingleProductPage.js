@@ -1,12 +1,12 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Link, useParams} from 'react-router-dom';
 // import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   Text,
-  Box,
+  Box, 
   Image,
   Tabs,
   TabPanels,
@@ -27,7 +27,11 @@ import show from './images/show.jpg';
 // import clothes from './images/clothes.jpg';
 import {StarIcon} from '@chakra-ui/icons';
 
-const SingleProductPage = () => {
+function SingleProductPage() {
+  const {productId} = useParams();
+  const [product, setProduct] = useState(null);
+  const [isLoading, setLoading] = useState(true);
+  const [hasError, setError] = useState(false);
   return (
     <>
       <Breadcrumb fontWeight="medium" fontSize="sm">
@@ -185,5 +189,5 @@ const SingleProductPage = () => {
       </Box>
     </>
   );
-};
+}
 export default SingleProductPage;
