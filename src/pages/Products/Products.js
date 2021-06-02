@@ -68,7 +68,7 @@ function Products() {
           {/* <Filter/> */}
         </Box>
 
-        <Box flex="3" align="center" w={{base: '95%', md: '95%'}} mx="2" backgroundColor="yellow">
+        <Box flex="4" align="center" w={{base: '95%', md: '95%'}} mx="2">
           <Heading>
             Sort
             {/* <Sort/> */}

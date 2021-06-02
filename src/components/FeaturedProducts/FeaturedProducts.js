@@ -73,6 +73,8 @@ function FeaturedProducts() {
           <ProductCard />
         </WrapItem> */}
       </Wrap>
+
+
       <Stack align="center" mb={{base: '10', md: '10'}}>
         <Link to="/products">
           <Button

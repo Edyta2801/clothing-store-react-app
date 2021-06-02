@@ -1,7 +1,16 @@
-import React from 'react';
-// import ProductCard from '../ProductCard/ProductCard';
+import React, {useState, useEffect} from 'react';
 
-const GridView = ({products}) => {
+import ProductCard from '../ProductCard/ProductCard';
+import {Wrap, WrapItem} from '@chakra-ui/react';
+import api from '../../api';
+
+const GridView = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    api.get('/products').then(response => setProducts(response.data));
+  }, []);
+
   return (
     <div>
       {/* {products.map(product => (
@@ -15,6 +24,23 @@ const GridView = ({products}) => {
       {/* {products.map(product => {
         return <ProductCard key={product.id} {...product} />;
       })} */}
+
+      <Wrap
+        // w="100%"
+        // spacing="1vw"
+        justify="space-evenly"
+        my="10"
+        // mt={{base: '0', md: '20'}}
+        // mb={{base: '10', md: '0'}}
+      >
+        {products.map(product => (
+          <div>
+            <WrapItem>
+              <ProductCard  key={product.id} {...product}></ProductCard>
+            </WrapItem>
+          </div>
+        ))}
+      </Wrap>
     </div>
   );
 };

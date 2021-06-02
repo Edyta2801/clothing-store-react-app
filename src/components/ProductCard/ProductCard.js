@@ -14,11 +14,10 @@ const ProductCard = ({product, title, price, image}) => {
           rounded="0.8rem"
           // src="https://finalspaceapi.com/img/gary_goodspeed.webp"
           src={image}
-
           alt="Gary Goodspeed"
           minW={{base: '80vw', md: '25vw'}}
-          // w={['90vw', '90vw', '90vw', '90vw']}
-          maxH={200}
+          // maxW={{lg:200}}
+          maxH={{base: 220, md: 150, lg: 220}}
           objectFit="cover"
         />
         <Link className="link" to="products/:id">
@@ -28,7 +27,7 @@ const ProductCard = ({product, title, price, image}) => {
 
       <Stack isInline justify="space-between" my="2">
         <Text
-          maxWidth={{base: '250px', md: '130px', lg:'170px', xl:'250px'}}
+          maxWidth={{base: '250px', md: '130px', lg: '170px', xl: '250px'}}
           fontWeight="semibold"
           fontSize="md"
           color="primary.800"
