@@ -26,7 +26,7 @@ const GridView = () => {
       })} */}
 
       <Wrap
-        // w="100%"
+
         // spacing="1vw"
         justify="space-evenly"
         my="10"
@@ -35,7 +35,7 @@ const GridView = () => {
       >
         {products.map(product => (
           <div>
-            <WrapItem>
+            <WrapItem my='5' mx='2'>
               <ProductCard  key={product.id} {...product}></ProductCard>
             </WrapItem>
           </div>

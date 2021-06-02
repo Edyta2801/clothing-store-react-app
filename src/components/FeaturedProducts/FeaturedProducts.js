@@ -55,7 +55,7 @@ function FeaturedProducts() {
         ))} */}
         {products.map(product => (
           <div >
-            <WrapItem>
+            <WrapItem my='5'>
               <ProductCard
               key={product.id} {...product}
               ></ProductCard>

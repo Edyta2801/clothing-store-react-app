@@ -14,10 +14,18 @@ const ProductCard = ({product, title, price, image}) => {
           rounded="0.8rem"
           // src="https://finalspaceapi.com/img/gary_goodspeed.webp"
           src={image}
-          alt="Gary Goodspeed"
-          minW={{base: '80vw', md: '25vw'}}
-          // maxW={{lg:200}}
-          maxH={{base: 220, md: 150, lg: 220}}
+          alt="clothes image"
+          // minW={{base: '80vw', md: '25vw',
+          // lg:'20vw'
+          // }}
+          w={{base: '80vw', md: '25vw', lg: '24vw'}}
+          // maxW={{md:'24vw', lg:'22vw'}}
+
+          // maxW='275px'
+          // maxH={{base: '30vh', md: '20vh',
+          // lg: '20vh'
+          // }}
+          h={{base: '30vh', md: '20vh', lg: '20vh'}}
           objectFit="cover"
         />
         <Link className="link" to="products/:id">
