@@ -8,7 +8,8 @@ function FeaturedProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    api.get('/products?limit=3').then(response => setProducts(response.data));
+    api.get('/products?limit=3')
+    .then(response => setProducts(response.data));
   }, []);
   return (
     <>

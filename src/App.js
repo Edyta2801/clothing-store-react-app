@@ -15,36 +15,34 @@ import {Products} from './pages/Products';
 import {Footer} from './components/Footer';
 
 import './App.css';
-import { ChakraProvider, Box } from '@chakra-ui/react';
+import {ChakraProvider, Box} from '@chakra-ui/react';
 import theme from '@chakra-ui/theme';
 import {ColorModeSwitcher} from './ColorModeSwitcher';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-    <Box
-    textAlign={{base:'center', md:'right'}}
-    mt='2'
-    mr='2'
-    >
-    <ColorModeSwitcher/>
-    </Box>
-    <Router>
-      <SideBar />
-      <Switch>
-        <LandingLayout>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/products/:id" children={<SingleProductPage />} />
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/products">
-            <Products />
-          </Route>
+      <Box textAlign={{base: 'center', md: 'right'}} mt="2" mr="2">
+        <ColorModeSwitcher />
+      </Box>
+      <Router>
+        <SideBar />
+        <Switch>
+          <LandingLayout>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/products/:productId">
+              <SingleProductPage />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/products">
+              <Products />
+            </Route>
 
-          {/* <Content>
+            {/* <Content>
         <Switch>
           <Route path="/about">
             <About />
@@ -64,11 +62,10 @@ function App() {
         </Switch>
       </Content>
       <Footer /> */}
-        </LandingLayout>
-      </Switch>
-      <Footer />
-    </Router>
-
+          </LandingLayout>
+        </Switch>
+        <Footer />
+      </Router>
     </ChakraProvider>
   );
 }

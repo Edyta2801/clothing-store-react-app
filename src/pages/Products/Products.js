@@ -13,7 +13,15 @@ function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    api.get('/products').then(response => setProducts(response.data));
+    api.get('/products')
+    .then
+    (response =>{
+      setProducts(response.data);
+    console.log('response= ', response);
+
+
+    });
+
   }, []);
 
   return (
@@ -49,6 +57,7 @@ function Products() {
       <div>
         {products.map(product => (
           <div key={product.id}>
+          <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
             <h2>
                  {product.title} {product.price}
             </h2>

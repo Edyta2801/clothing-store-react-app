@@ -4,7 +4,7 @@ import {IconButton, Box, Image, Text, Stack} from '@chakra-ui/react';
 import {Search2Icon} from '@chakra-ui/icons';
 import './style.css';
 
-const ProductCard = ({product, title, price, image}) => {
+const ProductCard = ({product, title, price, image, productId}) => {
   return (
     <Box
     // maxW="300px"
@@ -28,7 +28,7 @@ const ProductCard = ({product, title, price, image}) => {
           h={{base: '30vh', md: '20vh', lg: '20vh'}}
           objectFit="cover"
         />
-        <Link className="link" to="products/:id">
+        <Link className="link" to={`/products/${productId}`}>
           <IconButton colorScheme="teal" icon={<Search2Icon />} rounded="full" size="md" />
         </Link>
       </Box>

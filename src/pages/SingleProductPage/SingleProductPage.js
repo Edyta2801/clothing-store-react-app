@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 // import {Wrap, WrapItem, Box, Heading, Button, Stack} from '@chakra-ui/react';
+import api from '../../api';
+
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   Text,
-  Box, 
+  Box,
   Image,
   Tabs,
   TabPanels,
@@ -30,8 +32,21 @@ import {StarIcon} from '@chakra-ui/icons';
 function SingleProductPage() {
   const {productId} = useParams();
   const [product, setProduct] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [hasError, setError] = useState(false);
+  // const [isLoading, setLoading] = useState(true);
+  // const [hasError, setError] = useState(false);
+
+  useEffect(() => {
+    api.get(`/products/${productId}`).then(
+      response => setProduct(response.data),
+      // setLoading(false);
+    );
+    // .catch((error) => {
+    //   setError(true);
+    //   setLoading(false);
+    // );
+  }, [productId]);
+
+  // const {title, price, description, image} = product;
   return (
     <>
       <Breadcrumb fontWeight="medium" fontSize="sm">
@@ -108,7 +123,13 @@ function SingleProductPage() {
           >
             <TabPanels align="center">
               <TabPanel>
-                <Image rounded="0.5rem" boxSize="430px" fit="cover" src={clothes} />
+                <Image
+                  rounded="0.5rem"
+                  boxSize="430px"
+                  fit="cover"
+                  src={clothes}
+                  // src={product.image}
+                />
               </TabPanel>
               <TabPanel>
                 <Image rounded="0.5rem" boxSize="430px" fit="cover" src={draft} />
@@ -176,7 +197,8 @@ function SingleProductPage() {
           </Box>
 
           <Box color="primary.800" opacity="0.9" fontSize="lg" my="5" fontWeight="bold">
-            $ 350.00
+            {/* $ 350.00 */}
+            {/* {product.price} */}
           </Box>
 
           <Text mt={2} color="gray.600">
